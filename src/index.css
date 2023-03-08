@@ -1,0 +1,35 @@
+.boss-container {
+  --background-color: orange;
+  --font-color: #fff;
+  position: fixed;
+  left: 50px;
+  bottom: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  z-index: 999;
+}
+.boss-conversation-container .button {
+  color: var(--font-color);
+  background: var(--background-color);
+  border: none;
+  border-radius: 5px;
+  padding: 6px 5px;
+}
+
+.boss-conversation-setting {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  height: 400px;
+  background: #eef;
+  z-index: 9999;
+}
+
+.boss-conversation-container .multiple-publish {
+  padding: 5px;
+  border-radius: 5px;
+}
