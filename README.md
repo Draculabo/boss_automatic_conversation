@@ -3,7 +3,9 @@
 
 ### 安装方法
 
-### 1. 点击 [boss_automatic_conversation_github](https://raw.githubusercontent.com/draculabo/boss_automatic_conversation/main/dist/boss_automatic_conversation.user.js) 从 github 安装脚本
+### 1. 点击 [Boss 直聘自动沟通助手](https://raw.githubusercontent.com/draculabo/boss_automatic_conversation/main/dist/boss_automatic_conversation.user.js) 从 github 安装脚本
+
+### 2. 点击[Boss 直聘自动沟通助手](https://greasyfork.org/zh-CN/scripts/464791-boss%E7%9B%B4%E8%81%98%E8%87%AA%E5%8A%A8%E6%B2%9F%E9%80%9A%E5%8A%A9%E6%89%8B) 从 Greasyfork 安装脚本
 
 ---
 
