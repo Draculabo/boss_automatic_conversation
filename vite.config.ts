@@ -36,8 +36,8 @@ export default defineConfig({
     environment: 'happy-dom',
   },
   build: {
-    // minify: false,
-    minify: true,
+    minify: false,
+    // minify: true,
     // sourcemap: true,
   },
   resolve: {
