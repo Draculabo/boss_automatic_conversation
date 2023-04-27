@@ -4,7 +4,6 @@ import { isNil } from './assistant';
 
 export default class Conversation {
   polling = {} as Polling;
-  pageNo: number = 1;
   setting = {} as Config;
   constructor() {
     this.init();
@@ -55,14 +54,15 @@ export default class Conversation {
   }
   navigateNextPage() {
     let search = '';
+    const pageReg = /(page)=([0-9])+/;
     const hasSearchParam = location.search.length !== 0;
-    const pageNo = this.pageNo;
+    const pageNo = parseInt(pageReg.exec(location.search)?.[2] || '1') + 1;
     if (/page=[0-9]+/.test(location.search)) {
-      search = location.search.replace(/(page=)[0-9]+/, `$1=${pageNo}`);
+      search = location.search.replace(pageReg, `$1=${pageNo}`);
     } else {
       search = location.search + `${hasSearchParam ? '&' : '?'}page=${pageNo}`;
     }
-    const url = `${location.origin}${location.pathname}${search}`;
-    window.location.href = url;
+    const newUrl = `${location.origin}${location.pathname}${search}`;
+    window.location.href = newUrl;
   }
 }
