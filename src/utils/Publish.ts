@@ -4,9 +4,10 @@ import { isNil, composeArrayToRegExp } from './assistant';
 
 export class Publish {
   private mountedTimer?: number;
-  private setting = new Config();
+  private setting = {} as Config;
   constructor() {
     this.start();
+    this.setting = new Config();
   }
   checkCondition() {
     const target = document.querySelector('.job-sec-text');

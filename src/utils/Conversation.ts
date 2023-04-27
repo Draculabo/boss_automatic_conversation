@@ -5,17 +5,21 @@ import { isNil } from './assistant';
 export default class Conversation {
   polling = {} as Polling;
   setting = {} as Config;
+  private maxLimit = 0;
   constructor() {
     this.init();
   }
   init() {
     this.setting = new Config();
     this.polling = new Polling(this.setting.config.automation, this.setting.config.executeInterval);
+    this.maxLimit = this.setting.config.maxLimit;
     this.polling.status && this.start();
   }
   executeIdleQueue() {
     if (this.setting.config.maxLimit <= 0) {
       this.polling.clear();
+      this.setting.config.maxLimit = this.maxLimit;
+      this.setting.syncWriteData();
       return;
     }
     if (Object.values(this.setting.config.idleMap).filter((v) => !v.status).length === 0) {
