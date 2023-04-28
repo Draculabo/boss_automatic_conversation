@@ -11,12 +11,14 @@ export default defineConfig({
       entry: 'src/index.ts',
       userscript: {
         icon: 'https://vitejs.dev/logo.svg',
-        name: 'boss直聘自动沟通助手',
-        namespace: 'npm/vite-plugin-monkey',
-        grant: ['GM_xmlhttpRequest'],
+        name: 'Boss直聘自动沟通助手',
+        namespace: 'Draculabo',
+        author: 'Draculabo',
+        license: 'MIT',
+        grant: [],
         match: ['https://www.zhipin.com/*'],
         require: [
-          'http://code.jquery.com/jquery-2.1.1.min.js',
+          // 'http://code.jquery.com/jquery-2.1.1.min.js',
           // 'https://cdn.jsdelivr.net/npm/core-js-bundle@latest/minified.js',
           // 或者使用 polyfill.io 智能 polyfill, 不过 polyfill.io 在大陆网络连通性很差, 几乎不能用
           // 'https://polyfill.io/v3/polyfill.min.js',
